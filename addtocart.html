@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cup of Joy</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+    <div id="intro" class="parallax-window" data-parallax="scroll" style="background-image: url(./img/cart.jpg); background-repeat: no-repeat; background-size: cover;">
+        <nav id="tm-nav" class="fixed w-full" style="position: fixed;">
+            <div class="tm-container mx-auto px-2 md:py-6 text-right">
+                <ul class="mb-3 text-2xl font-normal flex justify-end flex-col md:flex-row">                     
+                    <li class="inline-block mb-4 mx-4" ><a href="./index.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Home</b></a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="./about.html" class="tm-text-brown py-1 md:py-3 px-4"><b>About</b></a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="./menu.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Menu</b></a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="./contact.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Contact</b></a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#" class="tm-text-brown py-1 md:py-3 px-4"><b>AddToCart</b></a></li>
+                </ul>         
+        </nav>
+
+        <div class="container mx-auto tm-container" style="padding-top: 150px;">
+            <b><h4 class="text-center" style="color:#2c0303; font-size: 30px;"><u>Shopping Cart</u></h4></b>
+            <div id="cartItems">
+              
+            </div>
+            <div id="cartTotal">
+              
+            </div>
+        </div>
+    
+        <script>
+            // Display cart items
+            function displayCart() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartContainer = document.getElementById('cartItems');
+                const totalContainer = document.getElementById('cartTotal');
+                
+                if (cart.length === 0) {
+                    cartContainer.innerHTML = '<p class="text-center" style="font-size: 24px;"><b>Your cart is empty</b></p>';
+                    return;
+                }
+    
+                let html = '';
+                let total = 0;
+    
+                cart.forEach((item, index) => {
+                    html += `
+                        <div class="cart-item" style="display: flex; margin: 10px; padding: 10px; border: 1px solid #ccc;">
+                            <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div style="margin-left: 20px;">
+                                <h3>${item.name}</h3>
+                                <p>${item.price}</p>
+                                <button onclick="removeItem(${index})">Remove</button>
+                            </div>
+                        </div>
+                    `;
+                });
+    
+                cartContainer.innerHTML = html;
+            }
+    
+            // Remove item from cart
+            function removeItem(index) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                displayCart();
+            }
+    
+            // Call displayCart when page loads
+            window.onload = displayCart;
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        
+    </script>
+</body>
+</html>

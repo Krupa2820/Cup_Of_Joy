@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cup of Joy</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+
+<body>
+    <nav id="tm-nav" class="fixed w-full">
+        <div class="tm-container mx-auto px-2 md:py-6 text-right">
+            <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
+                <li class="inline-block mb-4 mx-4"><a href="./index.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Home</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="./about.html" class="tm-text-brown py-1 md:py-3 px-4"><b>About</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="#menu" class="tm-text-brown py-1 md:py-3 px-4"><b>Menu</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="./contact.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Contact</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="./addtocart.html" class="tm-text-brown py-1 md:py-3 px-4"><b>AddToCart (<span id="cartCount">0</span>)</b></a></li>
+            </ul>
+        </div>            
+    </nav>
+
+    <div id="menu" class="parallax-window" data-parallax="scroll" style="background-image: url(./img/cafe-bg-02.jpg); background-repeat: no-repeat; background-size: cover;">
+        <div class="container mx-auto tm-container py-24 sm:py-48">
+            <div class="text-center mb-16">
+                <h2 class="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">Our Cup of Joy Menu</h2>
+            </div>            
+            <div class="flex flex-col lg:flex-row justify-around items-center">
+                <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
+                    <div class="flex items-start mb-6 tm-menu-item" id="1">
+                        <img src="img/menu-item-1.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Cappuccino</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">M &nbsp; ₹ 130</div>
+                            <div class="text-white text-md sm:text-lg font-light">L &nbsp;₹ 200</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>                    
+                    </div>
+                    <div class="flex items-start mb-6 tm-menu-item" id="2">
+                        <img src="img/menu-item-2.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Americano</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">M &nbsp; ₹ 150</div>
+                            <div class="text-white text-md sm:text-lg font-light">L &nbsp; ₹ 250</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>                    
+                    </div>
+                    <div class="flex items-start mb-6 tm-menu-item" id="3">
+                        <img src="img/menu-item-3.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">M &nbsp; ₹ 150</div>
+                            <div class="text-white text-md sm:text-lg font-light">L &nbsp; ₹ 250</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>                    
+                    </div>
+                    <div class="flex items-start mb-6 tm-menu-item" id="4">
+                        <img src="img/menu-item-4.jpg" alt="Image" class="rounded-md">
+                        <div class="ml-3 sm:ml-6">
+                            <h3 class="text-lg sm:text-xl tm-text-yellow mb-1">Hot Espresso</h3>
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Chocolate</h3>
+                            <div class="text-white text-md sm:text-lg font-light">Size M &nbsp; ₹ 140 . L &nbsp; ₹ 180</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2" id="5">
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Cappuccino</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">Small &nbsp; ₹ 130</div>
+                            <div class="text-white text-md sm:text-lg font-light">Large &nbsp; ₹ 160</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>
+                        <img src="img/menu-item-5.jpg" alt="Image" class="rounded-md">                   
+                    </div>
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2" id="6">
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Americano</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">Small &nbsp; ₹ 160</div>
+                            <div class="text-white text-md sm:text-lg font-light">Large &nbsp; ₹ 220</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>
+                        <img src="img/menu-item-6.jpg" alt="Image" class="rounded-md">                    
+                    </div>
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2" id="6">
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Milky Latte</h3>
+                            <div class="text-white text-md sm:text-lg font-light mb-1">Small &nbsp; ₹ 110</div>
+                            <div class="text-white text-md sm:text-lg font-light">Large &nbsp; ₹ 140</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div>   
+                        <img src="img/menu-item-7.jpg" alt="Image" class="rounded-md">                 
+                    </div>
+                    <div class="flex items-start justify-end mb-6 tm-menu-item-2" id="7">                    
+                        <div class="text-right mr-6">
+                            <h3 class="text-lg sm:text-xl tm-text-yellow mb-1">Iced Espresso</h3>
+                            <h3 class="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Mocha</h3>
+                            <div class="text-white text-md sm:text-lg font-light">Small &nbsp; ₹ 115 . Large &nbsp; ₹ 150</div>
+                            <button id="addToCartButton" style="color: aliceblue;">Add To Cart</button>
+                        </div> 
+                        <img src="./img/menu-item-8.jpg" alt="Image" class="rounded-md">                   
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    
+    <script>
+       
+// Store cart items in localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+updateCartCount();
+
+// Add click event listeners to all "Add To Cart" buttons
+document.querySelectorAll('#addToCartButton').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const menuItem = e.target.closest('.tm-menu-item, .tm-menu-item-2');
+        
+        const itemDetails = {
+            id: menuItem.id,
+            name: menuItem.querySelector('h3').textContent,
+            price: menuItem.querySelector('.text-white').textContent,
+            image: menuItem.querySelector('img').src
+        };
+        
+        cart.push(itemDetails);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        
+        // Show confirmation message
+        alert('Item added to cart!');
+    });
+});
+
+function updateCartCount() {
+    const cartCount = cart.length;
+    document.getElementById('cartCount').textContent = cartCount;
+}
+
+            
+            document.querySelectorAll('a[href^="addtocart"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    </script>
+</body>
+</html>

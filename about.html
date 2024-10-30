@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cup of Joy</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+   
+</head>
+
+<body>
+    <nav id="tm-nav" class="fixed w-full">
+        <div class="tm-container mx-auto px-2 md:py-6 text-right">
+            <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
+                <li class="inline-block mb-4 mx-4"><a href="./index.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Home</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="#about" class="tm-text-brown py-1 md:py-3 px-4"><b>About</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="./menu.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Menu</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="./contact.html" class="tm-text-brown py-1 md:py-3 px-4"><b>Contact</b></a></li>
+                <li class="inline-block mb-4 mx-4"><a href="./addtocart.html" class="tm-text-brown py-1 md:py-3 px-4"><b>AddToCart</b></a></li>
+            </ul>
+        </div>            
+    </nav>
+
+    <!--about-->
+    <div id="about" class="parallax-window" data-parallax="scroll" style="background-image: url(./img/cafe-bg-03.jpg);">
+        <div class="container mx-auto tm-container py-24 sm:py-48">
+            <div class="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
+                <div class="bg-white bg-opacity-80 p-12 pb-14 rounded-xl mb-5">
+                    <h2 class="mb-6 tm-text-green text-4xl font-medium">About our Cup of Joy</h2>
+                    <p class="mb-6 text-base leading-8">
+                        We believe that a great cup of coffee is more than just a drink—it's an experience. We wanted to create a space where people could come together, relax, and enjoy.
+                    </p>
+                    <p class="text-base leading-8">
+                        Our mission is to serve the finest coffee while fostering a welcoming environment for our community. We source our beans from sustainable farms, ensuring that each cup not only tastes good but also supports ethical practices.
+                    </div>
+                <a href="./contact.html" class="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+                    <i class="far fa-comments mr-4"></i>
+                    Contact
+                </a>
+            </div>           
+        </div>        
+    </div>
+    <script>
+            
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+</script>
+</body>
+</html>
